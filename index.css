@@ -1,0 +1,106 @@
+body {
+  background: #4f4f4f;
+  font-family: sans-serif;
+  color: white;
+}
+
+fieldset {
+  background: #1f1f1f;
+  color: #f1f1f1;
+  border: 1px solid #dbdbdb;
+  margin-top: 20px;
+}
+
+legend {
+  background: #1f1f1f;
+  border: 1px solid #dbdbdb;
+}
+
+pre {
+  display: block;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form > div {
+  display: flex;
+  flex: 1;
+  margin: 5px 0;
+}
+
+.form > div > input,
+.form > div > textarea {
+  margin-left: 10px;
+  flex: 1;
+}
+
+input[type="submit"] {
+  background: #3d3d82;
+  border: 2px solid #3d3d82;
+  border-radius: 6px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: red;
+  border: 2px solid #3d3d82;
+  border-radius: 6px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+  animation: colorRotate 1s linear 0s infinite;
+  filter: hue(23deg);
+}
+
+@keyframes colorRotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+#field {
+  position: relative;
+}
+
+#alert {
+  color: white;
+  background: green;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 25px;
+  left: 0;
+  top: 0;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  transition: ease opacity 0.2s;
+}
+
+.hidden {
+  opacity: 0 !important;
+  pointer-events: none;
+  transition: unset;
+}
+
+svg {
+  height: 1rem;
+  margin: 0 5px;
+}
