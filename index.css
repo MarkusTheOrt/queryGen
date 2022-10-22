@@ -50,6 +50,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background: red;
+  background-image: linear-gradient(to right, red, blue);
   border: 2px solid #3d3d82;
   border-radius: 6px;
   padding: 10px;
