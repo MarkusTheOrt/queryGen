@@ -8,6 +8,7 @@ const text = document.getElementById("text");
 const query = document.getElementById("query");
 const field = document.getElementById("field");
 const alert = document.getElementById("alert");
+const clr = document.getElementById("cleary");
 const values = [];
 
 const createVal = (num, nam, tag, tex) => {
@@ -29,6 +30,13 @@ const createQuery = () => {
 
 btn.onclick = (e) => {
   values.push(createVal(number.value, name.value, tags.value, text.value));
+  query.innerHTML = createQuery();
+};
+
+clr.onclick = (e) => {
+  while (values.length) {
+    values.pop();
+  }
   query.innerHTML = createQuery();
 };
 
